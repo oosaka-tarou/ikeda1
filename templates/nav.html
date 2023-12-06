@@ -1,0 +1,89 @@
+<div class="fixed-top">
+{% load accounts_user %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <h3 style="color:white">池田糖化工業㈱裏サイト1　　</h3>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <button type="button" onclick="history.back()">前のページへ戻る(☜)</button>
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　　　　　　メニュー
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　　　　　　メニュー
+
+                        {% endif %}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href={% url "nippo-1" %}>1.会社紹介</a></li>
+                        <li><a class="dropdown-item" href={% url "nippo-2" %}>2.箕島工場屋外の風景</a></li>
+                        <li><a class="dropdown-item" href={% url "nippo-3" %}>3.箕島工場屋内の風景</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href={% url "nippo-list" %}>4.部署紹介</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        {% if request.user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　　　　　リンク集
+                        {% else %}
+                            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            　　　　　　リンク集
+                        {% endif %}
+                        </a>
+                
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="https://koujitaniguchi.pythonanywhere.com/accounts/login/" target="_blank">1.池田糖化工業㈱裏サイト2</a></li>
+                        <li><a class="dropdown-item" href="https://taniimasakazu.pythonanywhere.com/accounts/login/" target="_blank">2.池田糖化工業㈱裏サイト3</a></li>
+                        <li><a class="dropdown-item" href="https://masakazutanii.pythonanywhere.com/accounts/login/" target="_blank">3.池田糖化工業㈱裏サイト4</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="https://kouji.pythonanywhere.com/accounts/login/" target="_blank">4.池田糖化工業㈱日報</a></li>
+                        </ul>
+                    </li>
+                    <body>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    </body>
+                    <a href={% url "nippo-0" %} class="btn btn-warning">ホーム画面へ</a>
+                    <body>
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    </body>
+                    <button type="button" onclick="history.forward()">次のページへ進む(☞)</button>
+                    
+                    <!--<li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">　　　　Disabled</a>
+                    </li>-->
+                </ul>
+        </div>
+
+        <div class="text-light nav-item dropstart ">
+            <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ request.user|user_display }}
+            </a>
+            <ul class="dropdown-menu endposition" aria-labelledby="navbarDropdown">
+            {% if request.user.is_authenticated %}
+                <li><a class="dropdown-item" href="{% url 'profile-update' request.user.profile.pk %}">アカウント設定</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href={{request.user.profile.get_own_archive_url}}>あなたの日報一覧表</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href={% url "account_logout" %}>ログアウト</a></li>
+            {% else %}
+                <li><a class="dropdown-item" href={% url "account_login" %}>ログイン</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href={% url "account_signup" %}>サインアップ</a></li>
+            {% endif %}
+            </ul>
+        </div>
+    </nav>
+</div>
+<hr>
+<hr>
+<hr>

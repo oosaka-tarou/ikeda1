@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head_title %}会社紹介{% endblock %}
+
+{% block content %}
+  <div class="container" >
+    <h1 class="my-3 text-start mx-auto" style="max-width:400px">{% if not profile %}1.会社紹介{% else %}{{profile.username}}の会社紹介{% endif %}</h1>
+    <hr>
+  </div>
+  <div>
+    <p  style="margin-left:660px " style="max-width:1200px"><font size="5">社　　名：池田糖化工業㈱</font></p>
+    <p  style="margin-left:660px " style="max-width:1200px"><font size="5">本社住所：〒720-8638　広島県福山市桜馬場町2番28号</font></p>
+    <p  style="margin-left:660px" style="max-width:1200px"><font size="5">箕島工場：〒721-8558　広島県福山市箕沖町97番地</font>
+      <a href="https://www.ikedatohka.co.jp/" target="_blank"><font size="5">会社HP </font></a>
+   
+      <div style="text-align:center">
+    <img src="/media/pages/company.jpg" alt="topimg">
+    <div style="position: absolute; top: 280px; left: 340px; max-width: 100%; max-height: 100%; padding: 30px; text-align: left;">
+    <p><font size=5 color="red">【箕島工場の写真】</font></p>
+  </div>
+    <hr>
+  <div>
+    <p  style="margin-left:0px " style="max-width:1200px"><font size="5">池田糖化工業株式会社って何をしている会社？</font></p>
+	 <video src="/media/pages/池田糖化工業株式会社って何をしている会社？.mp4" width="1300px" height="400px" controls />
+  </div>
+
+{% endblock %}

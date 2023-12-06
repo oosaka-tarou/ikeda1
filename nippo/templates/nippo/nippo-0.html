@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block head_title %}裏サイト1へようこそ{% endblock %}
+
+{% block content %}
+  <div class="container" >
+    <h1 class="my-3 text-start mx-auto" style="max-width:600px">{% if not profile %}池田糖化工業㈱裏サイト1へようこそ{% else %}{{profile.username}}の部署紹介{% endif %}</h1>
+    <hr>
+  </div>
+  
+  <div style="width:1500px;border: 2px solid #4169e1; background: #ffffff; box-shadow:3px 3px 6px -2px #555;margin-left:auto;margin-right:auto;">
+    <div  style="background: #4169e1; color: #ffffff; padding: 5px 15px 1px 15px;"><p><font size="6">概要</font></p></div>
+    <div style="padding: 15px;">
+    <p style="margin : 0px 0px 1px 30px"><font size="5">このページは、以下の構成になっています。<font color="red">しかし、ログインしないと全て使用不可となります。</font></font></p></div></div>
+    <p>&nbsp;</p>
+  </div>
+
+  <div style="width:1500px;border: 2px solid #4169e1; background: #ffffff; box-shadow:3px 3px 6px -2px #555;margin-left:auto;margin-right:auto;">
+    <div style="background: #4169e1; color: #ffffff; padding: 7px 15px 1px 15px;"><p><font size="5">メニューバー</font></p></div>
+    <div style="padding: 15px;">
+  </div>
+
+  <div style="border: solid 1px #E65; padding: 10px; border-width:20px 10px 5px; margin: 10px 30px;">
+    <p  style="margin : 0px 10px 1px 20px" style="max-width:1200px"><font size="5">「メニュー」タブ</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">１. 会社紹介</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">２. 箕島工場屋外の風景</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">３. 箕島工場屋内の風景</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">４. 部署紹介</font></p>
+  </div>
+
+  <div style="border: solid 1px #E65; padding: 10px; border-width:20px 10px 5px; margin: 10px 30px;">
+    <p  style="margin : 0px 10px 1px 20px" style="max-width:1200px"><font size="5">「リンク集」タブ</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">１. 池田糖化工業㈱裏サイト2</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">２. 池田糖化工業㈱裏サイト3</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">３. 池田糖化工業㈱裏サイト4</font></p>
+    <p  style="margin : 0px 3px 1px 60px" style="max-width:1200px"><font size="4">４. 池田糖化工業㈱日報</font></p></div>
+    <p>&nbsp;</p>
+  </div>
+  <p>&nbsp;</p>
+{% endblock %}
+
+
